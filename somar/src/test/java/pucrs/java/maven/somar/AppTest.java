@@ -15,7 +15,6 @@ public class AppTest{
 	 */
 	@Test
 	public void testSomar() {
-		
 		assertEquals(30, Soma.somar(10, 20));
 	}
 }
