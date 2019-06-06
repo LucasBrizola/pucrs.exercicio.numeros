@@ -5,13 +5,14 @@ package pucrs.java.maven.somar;
  *
  */
 public class Soma {
+	private static final String VERSION_NUMBER = "0.0.2";
 	/**
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		if (args.length == 1 && args[0].equals("--versão")) {
-			System.out.println("Programa Soma (C) 2019. Versão 0.02");
+			System.out.println("Programa Soma (C) 2019. Versão:" + VERSION_NUMBER);
 			return;
 		}
 		
