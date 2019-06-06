@@ -10,8 +10,13 @@ public class Soma {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		verificarNumeroDeParametros(args);
+		if (args.length == 1 && args[0].equals("--versão")) {
+			System.out.println("Programa Soma (C) 2019. Versão 0.02");
+			return;
+		}
+		
 		try {
+			verificarNumeroDeParametros(args);
 			int a = Integer.parseInt(args[0]);
 			int b = Integer.parseInt(args[1]);
 			System.out.println(somar(a, b));
@@ -26,12 +31,17 @@ public class Soma {
 
 	}
 
+	/**
+	 * 
+	 * @param args
+	 */
 	static void verificarNumeroDeParametros(String[] args) {
 		if (args.length != 2) {
 			throw new IllegalArgumentException();
 		}
 	}
-
+	
+	
 	/**
 	 * 
 	 * @param a
